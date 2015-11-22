@@ -16,6 +16,7 @@ public class Controller {
     // board size
     public static int n = 6;
     private static Point starting = new Point(0, 0);
+
     @FXML
     private GridPane grid;
     private Background bf_white = new Background(new BackgroundFill(Paint.valueOf("white"), new CornerRadii(10), null));
@@ -199,6 +200,7 @@ public class Controller {
         cd.setContentText("Please specify whether you want to\nuse recursive or iterative backtracking dfs search:");
         Optional<AlgorithmType> res = cd.showAndWait();
         if (res.isPresent()) {
+            inited = false;
             ArrayList<Point> sol;
             if (res.get() == AlgorithmType.Iterative) {
                 sol = findPath(n);

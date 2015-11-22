@@ -30,7 +30,6 @@
         </rowConstraints>
     </GridPane>
 
-
     <columnConstraints>
         <ColumnConstraints hgrow="ALWAYS"/>
     </columnConstraints>

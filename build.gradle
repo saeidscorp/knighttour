@@ -1,3 +1,6 @@
+description = "Knight's Tour Backtracking DFS implementation"
+version = '0.1.0'
+
 apply plugin: 'application'
 
 sourceCompatibility = '1.8'

@@ -15,12 +15,6 @@ import java.util.*;
 public class Main extends Application {
 
     public static void main(String[] args) {
-        /*ArrayList<Point> sol = Controller.findPath_recur(8);
-        if (sol != null)
-            for (Point p : sol)
-                System.out.print(p);
-        else
-            System.out.print("NOTHING");*/
         launch(args);
     }
 
