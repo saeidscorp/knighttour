@@ -1,0 +1,9 @@
+apply plugin: 'application'
+
+sourceCompatibility = '1.8'
+
+task hello << {
+    println 'Hello Cruel World!'
+}
+
+mainClassName = 'one.scorp.knighttour.Main'
