@@ -1,8 +1,11 @@
+// I have no better description in mind now :P
 description = "Knight's Tour Backtracking DFS implementation"
 version = '0.1.0'
 
+// application plugin is enough... no need to apply 'java' :D
 apply plugin: 'application'
 
+// required... since I used java 8 diamond types
 //noinspection GroovyUnusedAssignment
 sourceCompatibility = '1.8'
 
@@ -10,5 +13,6 @@ task hello << {
     println 'Hello Cruel World!'
 }
 
+// entry point (understood by application plugin)
 //noinspection GroovyUnusedAssignment
 mainClassName = 'one.scorp.knighttour.Main'
