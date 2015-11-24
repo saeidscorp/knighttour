@@ -15,6 +15,8 @@ import java.util.*;
 
 public class Main extends Application {
 
+    public static Image icon = new Image(Main.class.getResourceAsStream("knight_white.png"));
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -67,6 +69,7 @@ public class Main extends Application {
         primaryStage.setTitle("Knight's Tour");
         Scene sc = new Scene(root);
         primaryStage.setResizable(false);
+        primaryStage.getIcons().add(icon);
         primaryStage.setScene(sc);
         primaryStage.show();
     }
