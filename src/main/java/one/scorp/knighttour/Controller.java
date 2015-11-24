@@ -179,6 +179,7 @@ public class Controller {
             for (int i = 0; i < sol.size(); i++) {
                 Point p = sol.get(i);
                 Pane r = getPane(p);
+                ((Text) r.getChildren().get(0)).setFill(Paint.valueOf("black"));
                 int x = p.x, y = p.y;
                 r.setBackground((x + y) % 2 == 0 ? bf_white : bf_grey);
                 Integer ss = i + 1;
