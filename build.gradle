@@ -3,10 +3,12 @@ version = '0.1.0'
 
 apply plugin: 'application'
 
+//noinspection GroovyUnusedAssignment
 sourceCompatibility = '1.8'
 
 task hello << {
     println 'Hello Cruel World!'
 }
 
+//noinspection GroovyUnusedAssignment
 mainClassName = 'one.scorp.knighttour.Main'
