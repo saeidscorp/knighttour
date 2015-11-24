@@ -16,6 +16,7 @@ public class Controller {
     // board size
     public static int n = 6;
     private static Point starting = new Point(0, 0);
+    private static PairComp pair_comparator = new PairComp();
 
     @FXML
     private GridPane grid;
@@ -48,7 +49,7 @@ public class Controller {
             if (xok && yok && (b & starting.equals(cp = new Point(x + dx, y + dy)) || !b && !steps.contains(cp)))
                 al.add(new Pair<>(cp, heuristics(cp, n)));
         }
-        al.sort(new PairComp());
+        al.sort(pair_comparator);
         ArrayList<Point> rt = new ArrayList<>();
         for (Pair<Point, Integer> npr : al)
             rt.add(npr.first);
