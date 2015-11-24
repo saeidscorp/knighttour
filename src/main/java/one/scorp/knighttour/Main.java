@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.*;
 import javafx.scene.*;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.*;
@@ -64,7 +65,8 @@ public class Main extends Application {
         }
 
         primaryStage.setTitle("Knight's Tour");
-        Scene sc = new Scene(root, 500, 525);
+        Scene sc = new Scene(root);
+        primaryStage.setResizable(false);
         primaryStage.setScene(sc);
         primaryStage.show();
     }

@@ -4,6 +4,7 @@ import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
@@ -23,7 +24,8 @@ public class Controller {
     private Background bf_white = new Background(new BackgroundFill(Paint.valueOf("white"), new CornerRadii(10), null));
     private Background bf_grey = new Background(new BackgroundFill(Paint.valueOf("whitesmoke"), new CornerRadii(10), null));
     private Background bf_orange = new Background(new BackgroundFill(Paint.valueOf("orange"), new CornerRadii(10), null));
-    private Background bf_red = new Background(new BackgroundFill(Paint.valueOf("red"), new CornerRadii(10), null));
+    private Background bf_knight = new Background(new BackgroundImage(new Image(getClass().getResource("knight.png").toString()),
+            BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(50, 50, true, true, true, false)));
     private Background bf_yellow = new Background(new BackgroundFill(Paint.valueOf("yellow"), new CornerRadii(10), null));
     private Task<Void> tsk;
     private Stack<ArrayList<Point>> all_scs;
@@ -114,6 +116,7 @@ public class Controller {
             for (int j = 0; j < n; j++) {
                 Pane p = getPane(i, j);
                 p.setBackground((i + j) % 2 == 0 ? bf_white : bf_grey);
+                ((Text) p.getChildren().get(0)).setFill(Paint.valueOf("black"));
                 setCellText(p, "");
             }
     }
@@ -131,7 +134,10 @@ public class Controller {
         if (state != null) {
             for (int i = 0; i < state.size(); i++) {
                 Pane r = getPane(state.get(i));
-                r.setBackground(i == state.size() - 1 ? bf_red : bf_yellow);
+                if (i == state.size() - 1) {
+                    r.setBackground(bf_knight);
+                    ((Text) r.getChildren().get(0)).setFill(Paint.valueOf("Pink"));
+                } else r.setBackground(bf_yellow);
                 Integer ss = i + 1;
                 setCellText(r, ss.toString());
             }
@@ -257,11 +263,7 @@ public class Controller {
     }
 
     private enum AlgorithmType {
-        Iterative, Recursive;
-
-        public String toString() {
-            return this.name();
-        }
+        Iterative, Recursive
     }
 
     private static class PairComp implements Comparator<Pair<Point, Integer>> {

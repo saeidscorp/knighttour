@@ -4,8 +4,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="5.0" prefHeight="293.0" prefWidth="366.0"
-          vgap="10.0" xmlns="http://javafx.com/javafx/null" fx:controller="one.scorp.knighttour.Controller">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="5.0" prefHeight="525" prefWidth="500"
+          vgap="10.0" minHeight="250" minWidth="350" xmlns="http://javafx.com/javafx/null"
+          fx:controller="one.scorp.knighttour.Controller">
 
     <GridPane id="grid" fx:id="grid" alignment="CENTER" hgap="1.0" vgap="1.0" GridPane.hgrow="ALWAYS"
               GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
