@@ -1,0 +1,12 @@
+These files are written by myself:
+
+src/main/java/one/scorp/knighttour/*
+    Controller.java -> Logic and GUI interactions
+    Main.java       -> Board creation and application launch
+    Pair.java       -> A simple pair implementation
+    Point.java      -> A simple integer pair
+
+    Permutation.java -> Implementation of an automaton for permutation
+
+src/main/resources/chessboard.fxml -> JavaFX scene description file
+build.gradle -> my gradle build script

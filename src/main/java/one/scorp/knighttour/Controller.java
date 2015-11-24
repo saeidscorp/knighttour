@@ -11,7 +11,7 @@ import javafx.scene.text.Text;
 
 import java.util.*;
 
-public class Controller {
+public final class Controller {
     // possible directions of a knight
     private static final int[][] dirs = new int[][]{{1, -2}, {2, -1}, {2, 1}, {1, 2}, {-1, 2}, {-2, 1}, {-2, -1}, {-1, -2}};
     // board size
@@ -136,7 +136,7 @@ public class Controller {
                 Pane r = getPane(state.get(i));
                 if (i == state.size() - 1) {
                     r.setBackground(bf_knight);
-                    ((Text) r.getChildren().get(0)).setFill(Paint.valueOf("Pink"));
+                    ((Text) r.getChildren().get(0)).setFill(Paint.valueOf("green"));
                 } else r.setBackground(bf_yellow);
                 Integer ss = i + 1;
                 setCellText(r, ss.toString());
@@ -183,7 +183,7 @@ public class Controller {
                 int x = p.x, y = p.y;
                 r.setBackground((x + y) % 2 == 0 ? bf_white : bf_grey);
                 Integer ss = i + 1;
-                setCellText(r, ss.toString());
+                setCellText(r, i == sol.size() - 1 ? "1, " + ss.toString() : ss.toString());
             }
         }
     }
