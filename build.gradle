@@ -16,3 +16,10 @@ task hello << {
 // entry point (understood by application plugin)
 //noinspection GroovyUnusedAssignment
 mainClassName = 'one.scorp.knighttour.Main'
+
+// the jar manifest
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
